@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cadastro</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgb(198, 204, 204);
+        }
+        .loguin-div {
+            background-color:  rgb(144, 156, 156);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 30px;
+            border-radius: 20px;
+            color: white;
+        }
+        .loguin-div input {
+            padding: 10px;
+            border: none;
+            outline: none;
+            font-size: 15px;
+        }
+        .loguin-div button{
+            background-color: dodgerblue;
+            border: none;
+            padding: 10px;
+            font-size: 15px;
+            width: 100%;
+            border-radius: 5px;
+            color: white;
+        }
+        .loguin-div button:hover{
+            background-color: rgb(20, 115, 209);
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="loguin-div">
+        <h1>cadastro</h1>
+        <input type="text" placeholder="nome">
+        <br><br>
+        <input type="text" placeholder="email">
+        <br><br>
+        <input id="senha" type="password" placeholder="crie uma senha">
+        <br><br>
+        <input id="confirmaSenha" type="password" placeholder="confirme sua senha">
+        <br><br>
+        <button onclick="verificarSenha()">enviar</button>
+        <p>já tem uma conta? <a href="/loguin.html">logar</a></p>
+    </div>
+    <script>
+        const senha = document.getElementById("senha");
+        const confirmaSenha =document.getElementById("confirmaSenha");
+
+        function verificarSenha() {
+            if (senha.value !== confirmaSenha.value){
+                window.alert("as senhas não são iguais");
+            }
+            else{
+                window.alert("tudo certo")
+            }
+        }
+    </script>
+</body>
+</html>
